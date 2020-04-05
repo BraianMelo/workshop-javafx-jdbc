@@ -85,8 +85,14 @@ public class DepartmentListController implements Initializable{
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Enter Department data");
 			dialogStage.setScene(new Scene(pane));
+			
+			//Não deixa que a tela seja redimensionada
 			dialogStage.setResizable(false);
+			
+			//Indica o Pai do stage
 			dialogStage.initOwner(parentStage);
+			
+			//Não deixa que outra tela seja acessada ate essa fechar
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.showAndWait();
 			
